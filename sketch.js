@@ -1,5 +1,6 @@
 let vid;
 let playing = true;
+vid = await createVideo("./assets/furyofjane.mp4")
 
 function setup() {
   createCanvas(400, 400);
