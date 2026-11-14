@@ -31,7 +31,7 @@ function mousePressed() {
 }
 
 function draw() {
- background(img);
+background(0)
  
  text('tap to play', width/2, height/2 - 20);
  let spectrum = fft.analyze();
@@ -45,3 +45,5 @@ function draw() {
    rect(x, height, width / spectrum.length, h * 4)
  }
 }
+
+//I cant get the canvas and therefore the analyze function is. not there. trust I've been trying I don't know what's going on.
