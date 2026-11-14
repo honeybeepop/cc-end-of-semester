@@ -4,7 +4,7 @@ let canvas;
 async function setup() {
    acidBass.onended(stopSound);
   canvas = createCanvas(400, 400);
-  canvas.parent("soundHolder");
+  canvas.parent("sketchHolder");
   rectMode(CENTER);
   angleMode(DEGREES);
   noStroke();
