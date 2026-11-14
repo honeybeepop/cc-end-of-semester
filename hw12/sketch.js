@@ -19,12 +19,9 @@ function draw() {
 
 function mousePressed() {
   if(acidBass.isPlaying()) {
-    acidBass.start();
+    acidBass.stop();
   }
   else {
-    acidBass.loop(false);
+    acidBass.start();
   }
-}
-function stopSound() {
-  acidBass.stop();
 }
