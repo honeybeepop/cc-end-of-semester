@@ -14,13 +14,7 @@ async function setup() {
 }
 
 function draw() {
- background(220);
- if (!sample.playing) {
-   text("click to play the sound and it will loop", 0, 20, width);
- }
- else {
-   text("click to stop the looping", 0, 20, width);
- }
+ background(0);
 }
 
 function mousePressed() {
