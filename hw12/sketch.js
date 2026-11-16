@@ -4,7 +4,6 @@ let soundfile, fft;
 let img;
 
 async function setup() {
-   acidBass.onended(stopSound);
   canvas = createCanvas(400, 400);
   canvas.parent("sketchHolder");
   rectMode(CENTER);
