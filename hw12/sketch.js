@@ -4,7 +4,7 @@ let soundfile, fft;
 let img;
 
 async function setup() {
-  canvas = createCanvas(400, 400);
+  canvas = createCanvas(windowWidth*.98, windowWidth*.8);
   canvas.parent("sketchHolder");
   rectMode(CENTER);
   angleMode(DEGREES);
@@ -14,23 +14,22 @@ async function setup() {
   acidBass.loop(true);
 
    fft = new p5.FFT();
- soundfile.connect(fft);
- soundfile.loop();
+ acidBass.connect(fft);
 
  img= await loadImage('./assets/metro.jpg')
 }
 
 function mousePressed() {
  if(acidBass.isPlaying()) {
-   acidBass.play();
+   acidBass.stop();
  }
  else {
-   acidBass.stop();
+   acidBass.play();
  }
 }
 
 function draw() {
-background(0)
+background(img)
  
  text('tap to play', width/2, height/2 - 20);
  let spectrum = fft.analyze();
@@ -45,4 +44,6 @@ background(0)
  }
 }
 
-//I cant get the canvas and therefore the analyze function is. not there. trust I've been trying I don't know what's going on.
+function windowResized() {
+  resizeCanvas(windowWidth*.98, windowHeight*.9)
+}
